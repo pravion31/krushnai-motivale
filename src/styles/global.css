@@ -634,52 +634,52 @@ h6 {
     grid-template-columns: 1fr;
   }
 
-  }
-
-  .btn {
-    padding: 0.65rem 1.25rem;
-    max-width: 100%;
-    white-space: normal;
-    text-align: center;
-    box-sizing: border-box;
-  }
-
-  .btn-lg {
-    padding: 0.75rem 1.25rem !important;
-    font-size: var(--text-sm) !important;
-    letter-spacing: 0.05em !important;
-  }
-
-  .section-footer-cta {
-    padding: 0 var(--space-2);
-  }
-
-  .section-footer-cta .btn {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .section {
-    padding: var(--space-10) 0;
-  }
-
-  .section-sm {
-    padding: var(--space-6) 0;
-  }
-
-  .section-header {
-    margin-bottom: var(--space-8);
-  }
-
-  .section-title {
-    font-size: clamp(var(--text-xl), 6vw, var(--text-3xl));
-  }
-
-  .section-subtitle {
-    font-size: var(--text-sm);
-    max-width: 100%;
-  }
 }
+
+.btn {
+  padding: 0.65rem 1.25rem;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.25rem !important;
+  font-size: var(--text-sm) !important;
+  letter-spacing: 0.05em !important;
+}
+
+.section-footer-cta {
+  padding: 0 var(--space-2);
+}
+
+.section-footer-cta .btn {
+  max-width: 100%;
+  width: 100%;
+}
+
+.section {
+  padding: var(--space-10) 0;
+}
+
+.section-sm {
+  padding: var(--space-6) 0;
+}
+
+.section-header {
+  margin-bottom: var(--space-8);
+}
+
+.section-title {
+  font-size: clamp(var(--text-xl), 6vw, var(--text-3xl));
+}
+
+.section-subtitle {
+  font-size: var(--text-sm);
+  max-width: 100%;
+}
+
 
 @media (max-width: 360px) {
   :root {
