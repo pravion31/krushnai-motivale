@@ -1,0 +1,220 @@
+.footer {
+  background: var(--color-burgundy);
+  color: var(--color-ivory);
+}
+
+/* Footer Top */
+.footer-top {
+  padding: var(--space-20) 0 var(--space-12);
+  border-bottom: 1px solid rgba(196, 154, 69, 0.2);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  gap: var(--space-12);
+}
+
+/* Brand */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  margin-bottom: var(--space-6);
+}
+
+.footer-logo img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid rgba(196, 154, 69, 0.4);
+}
+
+.footer-brand-name {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-ivory);
+}
+
+.footer-brand-marathi {
+  display: block;
+  font-family: var(--font-devanagari);
+  font-size: var(--text-xs);
+  color: var(--color-gold-light);
+}
+
+.footer-brand-desc {
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: rgba(255, 248, 237, 0.65);
+  margin-bottom: var(--space-6);
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(196, 154, 69, 0.15);
+  color: var(--color-gold-light);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: var(--color-gold);
+  color: var(--color-brown);
+}
+
+.footer-whatsapp {
+  margin-top: var(--space-4);
+}
+
+/* Columns */
+.footer-col-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-gold-light);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(196, 154, 69, 0.2);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: rgba(255, 248, 237, 0.65);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  padding: 0.2rem 0;
+}
+
+.footer-link:hover {
+  color: var(--color-gold-light);
+}
+
+.footer-link svg {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.footer-link-marathi {
+  font-family: var(--font-devanagari);
+  font-size: var(--text-xs);
+  color: var(--color-gold);
+  margin-left: auto;
+}
+
+/* Contact */
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.footer-contact-icon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-address {
+  font-size: var(--text-sm);
+  color: rgba(255, 248, 237, 0.65);
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.footer-landmark {
+  display: block;
+  font-size: var(--text-xs);
+  color: rgba(255, 248, 237, 0.45);
+  margin-top: var(--space-1);
+}
+
+.footer-contact-link {
+  font-size: var(--text-sm);
+  color: rgba(255, 248, 237, 0.65);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-link:hover {
+  color: var(--color-gold-light);
+}
+
+.footer-directions {
+  margin-top: var(--space-4);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding: var(--space-6) 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.footer-copyright {
+  font-size: var(--text-sm);
+  color: rgba(255, 248, 237, 0.5);
+}
+
+.footer-disclaimer {
+  font-size: var(--text-xs);
+  color: rgba(255, 248, 237, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}

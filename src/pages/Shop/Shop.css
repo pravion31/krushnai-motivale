@@ -1,0 +1,322 @@
+.shop-page {
+  background: var(--bg-primary);
+  padding-bottom: var(--space-20);
+}
+
+/* Page Header */
+.shop-header {
+  background: linear-gradient(135deg, var(--color-maroon) 0%, var(--color-burgundy) 100%);
+  padding: var(--space-10) 0 var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.shop-header .breadcrumb {
+  color: rgba(255, 248, 237, 0.6);
+}
+
+.shop-header .breadcrumb a {
+  color: rgba(255, 248, 237, 0.8);
+}
+
+.shop-header .breadcrumb a:hover {
+  color: var(--color-gold);
+}
+
+.shop-title {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  color: var(--color-ivory);
+  margin-bottom: var(--space-2);
+}
+
+.shop-subtitle {
+  font-size: var(--text-base);
+  color: rgba(255, 248, 237, 0.65);
+}
+
+/* Layout */
+.shop-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+/* Sidebar */
+.shop-sidebar {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-cream);
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-4));
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.sidebar-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sidebar-close {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+}
+
+.sidebar-close:hover {
+  color: var(--color-maroon);
+}
+
+/* Filter Groups */
+.filter-group {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-cream);
+}
+
+.filter-group:last-of-type {
+  border-bottom: none;
+}
+
+.filter-group-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  padding: 0.25rem 0;
+  transition: color var(--transition-fast);
+}
+
+.filter-option:hover {
+  color: var(--color-maroon);
+}
+
+.filter-option input[type="radio"] {
+  accent-color: var(--color-maroon);
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.filter-option em {
+  font-style: normal;
+  font-family: var(--font-devanagari);
+  font-size: var(--text-xs);
+  color: var(--color-gold);
+  margin-left: var(--space-1);
+}
+
+/* Price Range */
+.price-range {
+  margin-bottom: var(--space-3);
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.price-slider {
+  width: 100%;
+  accent-color: var(--color-maroon);
+}
+
+.price-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.price-btn {
+  font-size: var(--text-xs);
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--border-cream);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.price-btn:hover,
+.price-btn.active {
+  border-color: var(--color-maroon);
+  color: var(--color-maroon);
+  background: rgba(101, 13, 39, 0.06);
+}
+
+/* Shop Main */
+.shop-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.shop-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-cream);
+  box-shadow: var(--shadow-sm);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.shop-results {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.shop-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.filter-toggle-btn {
+  display: none;
+}
+
+.sort-select-wrap {
+  position: relative;
+}
+
+.sort-select {
+  padding: 0.5rem 2rem 0.5rem 0.85rem;
+  border: 1.5px solid var(--border-cream);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  background: var(--bg-card);
+  cursor: pointer;
+  appearance: none;
+  font-family: var(--font-body);
+}
+
+.sort-select:focus {
+  border-color: var(--color-gold);
+  outline: none;
+}
+
+.sort-icon {
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.shop-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.shop-empty {
+  text-align: center;
+  padding: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--text-muted);
+}
+
+/* Mobile Overlay */
+.filter-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: calc(var(--z-dropdown) - 1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .shop-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: var(--z-modal);
+    border-radius: 0;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease;
+  }
+
+  .shop-sidebar.open {
+    display: block;
+  }
+
+  .sidebar-close {
+    display: flex;
+  }
+
+  .filter-toggle-btn {
+    display: flex;
+  }
+
+  .filter-overlay {
+    display: block;
+  }
+
+  .shop-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}

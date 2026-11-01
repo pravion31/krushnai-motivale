@@ -1,0 +1,444 @@
+/* ======================================================
+   HOME PAGE STYLES
+   ====================================================== */
+
+/* Categories Grid */
+.home-categories {
+  background: var(--bg-primary);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+@media (max-width: 1024px) {
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Bestsellers */
+.home-bestsellers {
+  background: var(--bg-secondary);
+}
+
+/* New Arrivals */
+.home-new-arrivals {
+  background: var(--bg-primary);
+}
+
+.section-footer-cta {
+  text-align: center;
+  margin-top: var(--space-10);
+}
+
+/* Featured Collection */
+.home-featured {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-featured-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.home-featured-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-featured-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(38, 8, 20, 0.92) 0%,
+    rgba(56, 14, 28, 0.75) 50%,
+    rgba(38, 8, 20, 0.4) 100%
+  );
+}
+
+.home-featured-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.home-featured-text {
+  max-width: 520px;
+  padding: var(--space-12) 0;
+}
+
+.home-featured-title {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  color: var(--color-ivory);
+  line-height: 1.15;
+  margin-bottom: var(--space-5);
+  margin-top: var(--space-4);
+}
+
+.home-featured-title em {
+  color: var(--color-gold-light);
+  font-style: italic;
+}
+
+.home-featured-desc {
+  font-size: var(--text-base);
+  color: rgba(255, 248, 237, 0.75);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+/* Our Story */
+.home-story {
+  background: var(--bg-primary);
+}
+
+.home-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.home-story-image {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  aspect-ratio: 4/5;
+}
+
+.home-story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-story-badge {
+  position: absolute;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  background: rgba(38, 8, 20, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(196, 154, 69, 0.4);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  text-align: center;
+  color: var(--color-ivory);
+}
+
+.home-story-badge .font-devanagari {
+  display: block;
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-gold-light);
+  margin-bottom: 2px;
+}
+
+.home-story-badge span:last-child {
+  font-size: var(--text-xs);
+  color: rgba(255, 248, 237, 0.6);
+  letter-spacing: 0.08em;
+}
+
+.home-story-brand {
+  color: var(--color-maroon);
+  font-style: italic;
+}
+
+.home-story-marathi {
+  font-size: var(--text-2xl);
+  color: var(--color-gold);
+  font-weight: 500;
+  margin-bottom: var(--space-6);
+  letter-spacing: 0.03em;
+}
+
+.home-story-text {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+}
+
+/* Why Choose Us */
+.home-why-us {
+  background: var(--color-burgundy);
+}
+
+.home-why-us .section-title {
+  color: var(--color-ivory);
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.why-us-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(196, 154, 69, 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.why-us-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(196, 154, 69, 0.4);
+  transform: translateY(-4px);
+}
+
+.why-us-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(196, 154, 69, 0.15);
+  border: 1px solid rgba(196, 154, 69, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  margin: 0 auto var(--space-4);
+}
+
+.why-us-marathi {
+  font-size: var(--text-sm);
+  color: var(--color-gold);
+  margin-bottom: var(--space-2);
+  letter-spacing: 0.02em;
+}
+
+.why-us-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-ivory);
+  margin-bottom: var(--space-3);
+}
+
+.why-us-desc {
+  font-size: var(--text-sm);
+  color: rgba(255, 248, 237, 0.6);
+  line-height: 1.7;
+}
+
+/* Instagram Gallery */
+.home-instagram {
+  background: var(--bg-secondary);
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-3);
+}
+
+.instagram-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.instagram-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.instagram-item:hover img {
+  transform: scale(1.08);
+}
+
+.instagram-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(101, 13, 39, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.instagram-item:hover .instagram-item-overlay {
+  opacity: 1;
+}
+
+/* Store Section */
+.home-store {
+  background: var(--bg-primary);
+}
+
+.home-store-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.home-store-map {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.map-placeholder {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--color-cream-dark) 100%);
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  text-align: center;
+  padding: var(--space-8);
+  border: 2px dashed var(--border-gold-light);
+}
+
+.map-pin-icon {
+  color: var(--color-maroon);
+}
+
+.map-placeholder p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.home-store-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.store-detail {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.store-detail-icon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.store-detail strong {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.store-detail address {
+  font-style: normal;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.store-landmark {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-top: var(--space-1);
+}
+
+.store-detail a {
+  color: var(--color-gold);
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+
+.store-detail a:hover {
+  text-decoration: underline;
+}
+
+.store-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home-story-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .home-store-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 640px) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-featured-text {
+    padding: var(--space-8) 0;
+  }
+}

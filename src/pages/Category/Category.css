@@ -1,0 +1,232 @@
+.category-page {
+  background: var(--bg-primary);
+  padding-bottom: var(--space-20);
+}
+
+/* Banner */
+.category-banner {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.category-banner-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.category-banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(38, 8, 20, 0.95) 0%,
+    rgba(56, 14, 28, 0.7) 50%,
+    rgba(38, 8, 20, 0.3) 100%
+  );
+}
+
+.category-banner-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: var(--space-10);
+  padding-top: var(--space-8);
+}
+
+.category-banner-content .breadcrumb {
+  color: rgba(255, 248, 237, 0.6);
+}
+
+.category-banner-content .breadcrumb a {
+  color: rgba(255, 248, 237, 0.8);
+}
+
+.category-banner-content .breadcrumb a:hover {
+  color: var(--color-gold);
+}
+
+.category-banner-marathi {
+  font-size: var(--text-xl);
+  color: var(--color-gold);
+  margin-bottom: var(--space-2);
+  letter-spacing: 0.03em;
+}
+
+.category-banner-title {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  color: var(--color-ivory);
+  margin-bottom: var(--space-3);
+  line-height: 1.1;
+}
+
+.category-banner-desc {
+  font-size: var(--text-lg);
+  color: rgba(255, 248, 237, 0.7);
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+/* Main Content */
+.category-main-content {
+  margin-top: var(--space-8);
+}
+
+/* Toolbar */
+.category-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-cream);
+  margin-bottom: var(--space-6);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.category-results {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.category-results strong {
+  color: var(--text-primary);
+}
+
+.category-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.category-price-filters {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.price-filter-btn {
+  font-size: var(--text-xs);
+  padding: 0.4rem 0.85rem;
+  border: 1.5px solid var(--border-cream);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+
+.price-filter-btn:hover,
+.price-filter-btn.active {
+  border-color: var(--color-maroon);
+  color: var(--color-maroon);
+  background: rgba(101, 13, 39, 0.06);
+}
+
+.sort-select-wrap {
+  position: relative;
+}
+
+.sort-select {
+  padding: 0.45rem 2rem 0.45rem 0.75rem;
+  border: 1.5px solid var(--border-cream);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  background: var(--bg-card);
+  cursor: pointer;
+  appearance: none;
+  font-family: var(--font-body);
+}
+
+.sort-select:focus {
+  border-color: var(--color-gold);
+  outline: none;
+}
+
+.sort-icon {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* Product Grid */
+.category-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+.category-empty {
+  text-align: center;
+  padding: var(--space-16) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--text-muted);
+}
+
+/* More Collections */
+.more-collections {
+  margin-top: var(--space-16);
+  padding-top: var(--space-10);
+  border-top: 1px solid var(--border-cream);
+  text-align: center;
+}
+
+.more-collections-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+}
+
+.more-collections-links {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .category-product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .category-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-banner {
+    min-height: 280px;
+  }
+
+  .category-price-filters {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-product-grid {
+    grid-template-columns: 1fr;
+  }
+}
