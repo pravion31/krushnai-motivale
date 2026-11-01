@@ -349,3 +349,54 @@
   .progress-step-label { display: none; }
   .checkout-step { padding: var(--space-5); }
 }
+
+@media (max-width: 480px) {
+  .checkout-step {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .checkout-summary-card {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .payment-option {
+    padding: var(--space-3);
+  }
+
+  .progress-step-number {
+    width: 28px;
+    height: 28px;
+    font-size: var(--text-xs);
+  }
+
+  .confirmation-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .confirmation-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .review-item {
+    flex-wrap: wrap;
+  }
+
+  .review-item-price {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .checkout-nav {
+    flex-direction: column-reverse;
+    gap: var(--space-3);
+  }
+
+  .checkout-nav .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

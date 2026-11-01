@@ -371,15 +371,69 @@
 @media (max-width: 640px) {
   .product-actions {
     flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .product-actions .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .product-wishlist-toggle {
     width: 100%;
     height: auto;
     padding: 0.75rem;
+    justify-content: center;
+  }
+
+  .product-whatsapp .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .related-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-price {
+    font-size: var(--text-2xl);
+  }
+
+  .product-gallery-main {
+    border-radius: var(--radius-lg);
+  }
+
+  .product-thumbnails {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: var(--space-2);
+  }
+
+  .product-thumbnails::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-thumb {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+  }
+
+  .product-quantity {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .product-name {
+    font-size: clamp(var(--text-xl), 6vw, var(--text-2xl));
+  }
+
+  .related-title {
+    font-size: var(--text-xl);
   }
 }

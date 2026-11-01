@@ -442,3 +442,49 @@
     padding: var(--space-8) 0;
   }
 }
+
+@media (max-width: 480px) {
+  .home-story-image {
+    aspect-ratio: 3/2;
+  }
+
+  .home-story-badge {
+    bottom: var(--space-3);
+    right: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .home-featured {
+    min-height: 380px;
+  }
+
+  .home-featured-title {
+    font-size: clamp(var(--text-2xl), 7vw, var(--text-3xl));
+  }
+
+  .home-featured-desc {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-6);
+  }
+
+  .why-us-card {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .map-placeholder {
+    min-height: 280px;
+  }
+
+  .store-actions {
+    flex-direction: column;
+  }
+
+  .store-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

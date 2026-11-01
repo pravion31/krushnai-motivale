@@ -197,37 +197,206 @@
   color: rgba(255, 248, 237, 0.5);
 }
 
-/* Responsive */
+/* Responsive — Mobile Only (desktop/laptop completely untouched) */
 @media (max-width: 768px) {
   .hero {
-    min-height: 90vh;
+    min-height: 100svh;
+    min-height: 100vh;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .hero-bg-img {
+    object-position: 70% center;
+  }
+
+  .hero-bg-overlay {
+    background: linear-gradient(
+      175deg,
+      rgba(38, 8, 20, 0.94) 0%,
+      rgba(56, 14, 28, 0.86) 40%,
+      rgba(38, 8, 20, 0.72) 75%,
+      rgba(38, 8, 20, 0.92) 100%
+    );
+  }
+
+  .hero-content {
+    padding-top: calc(var(--header-height) + var(--space-6));
+    padding-bottom: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100svh;
+    min-height: 100vh;
   }
 
   .hero-text-block {
     max-width: 100%;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: var(--text-xs);
+    padding: 0.35rem 0.85rem;
+    margin-bottom: var(--space-3);
   }
 
   .hero-headline {
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(1.85rem, 7.5vw, 2.75rem);
     font-weight: 600;
+    margin-bottom: var(--space-3);
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-sm);
+    line-height: 1.55;
+    margin-bottom: var(--space-3);
+    max-width: 100%;
+  }
+
+  .hero-brand-marathi {
+    margin-bottom: var(--space-5);
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .hero-brand-marathi .font-devanagari {
+    font-size: var(--text-xl);
   }
 
   .hero-actions {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    margin-bottom: var(--space-6);
+    gap: var(--space-2);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
   }
 
   .hero-trust {
-    gap: var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 380px;
+    gap: var(--space-2);
+    background: rgba(0, 0, 0, 0.25);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(196, 154, 69, 0.25);
+    backdrop-filter: blur(8px);
+  }
+
+  .hero-trust-item {
+    text-align: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .hero-trust-number {
+    font-size: var(--text-lg);
+  }
+
+  .hero-trust-label {
+    font-size: 0.65rem;
+    white-space: nowrap;
+  }
+
+  .hero-trust-divider {
+    height: 24px;
+    opacity: 0.5;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-scroll-indicator {
-    display: none;
+  .hero-content {
+    padding-top: calc(var(--header-height) + var(--space-4));
+    padding-bottom: var(--space-6);
+  }
+
+  .hero-headline {
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+  }
+
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .hero-brand-marathi {
+    margin-bottom: var(--space-4);
+  }
+
+  .hero-brand-marathi .font-devanagari {
+    font-size: var(--text-lg);
+  }
+
+  .hero-brand-tagline {
+    font-size: var(--text-xs);
+  }
+
+  .hero-actions {
+    margin-bottom: var(--space-5);
+    gap: var(--space-2);
+  }
+
+  .hero-actions .btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-trust {
+    max-width: 100%;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .hero-trust-number {
+    font-size: var(--text-base);
+  }
+
+  .hero-trust-label {
+    font-size: 0.6rem;
   }
 
   .hero-trust-divider {
-    height: 30px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-headline {
+    font-size: 1.5rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.65rem;
+  }
+
+  .hero-trust-number {
+    font-size: var(--text-sm);
+  }
+
+  .hero-trust-label {
+    font-size: 0.55rem;
+  }
+
+  .hero-actions .btn {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.8rem;
   }
 }

@@ -218,3 +218,30 @@
     gap: var(--space-2);
   }
 }
+
+@media (max-width: 480px) {
+  .footer-top {
+    padding: var(--space-10) 0 var(--space-6);
+  }
+
+  .footer-social {
+    gap: var(--space-2);
+  }
+
+  .footer-brand-desc {
+    font-size: var(--text-xs);
+  }
+
+  .footer-address {
+    font-size: var(--text-xs);
+  }
+
+  .footer-landmark {
+    font-size: 0.7rem;
+  }
+
+  .footer-directions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

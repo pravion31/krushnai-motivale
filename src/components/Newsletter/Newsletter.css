@@ -126,6 +126,10 @@
 }
 
 @media (max-width: 600px) {
+  .newsletter-inner {
+    padding: var(--space-10) var(--space-4);
+  }
+
   .newsletter-input-group {
     flex-direction: column;
     border-radius: var(--radius-md);

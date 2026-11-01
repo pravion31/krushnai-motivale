@@ -204,3 +204,36 @@
   margin-top: auto;
   width: 100%;
 }
+
+/* Mobile: show quick-add actions since hover doesn't work on touch */
+@media (max-width: 768px) {
+  .product-card-actions {
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(56, 37, 30, 0.75), transparent);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card-info {
+    padding: var(--space-3);
+  }
+
+  .product-card-name {
+    font-size: var(--text-sm);
+  }
+
+  .product-card-price {
+    font-size: var(--text-lg);
+  }
+
+  .product-action-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.65rem;
+  }
+
+  .product-card-cta {
+    padding: 0.5rem 0.75rem;
+    font-size: var(--text-xs);
+  }
+}
+
